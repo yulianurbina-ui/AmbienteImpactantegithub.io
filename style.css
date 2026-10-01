@@ -1,0 +1,841 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #16324f;
+    background-color: #f7fbfd;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 6%;
+    border-bottom: 1px solid #e5eef3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #e6f7fc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.logo h1,
+.logo h2 {
+    color: #087ea4;
+    font-size: 21px;
+    line-height: 1.1;
+}
+
+.logo span:last-child {
+    display: block;
+    color: #78909c;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+nav a {
+    color: #486273;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.activo {
+    color: #0794c3;
+}
+
+.nav-login {
+    margin-left: 15px;
+}
+
+.btn-login {
+    display: inline-block;
+    padding: 10px 19px;
+    background-color: #0794c3;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #056d91;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 9%;
+    background: linear-gradient(135deg, #eaf9fd 0%, #ffffff 55%, #e8f7fb 100%);
+    overflow: hidden;
+}
+
+.hero-contenido {
+    max-width: 650px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #d9f3fa;
+    color: #087ea4;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.08;
+    color: #123b56;
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    color: #0794c3;
+    display: block;
+}
+
+.hero p {
+    max-width: 590px;
+    color: #607d8b;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-botones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-principal {
+    display: inline-block;
+    padding: 13px 24px;
+    background-color: #0794c3;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #056d91;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 2px solid #0794c3;
+    color: #087ea4;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: #0794c3;
+    color: white;
+}
+
+
+/* =========================================
+   VISUAL DEL HERO
+========================================= */
+
+.hero-visual {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #d5f5fc 0%, #b7eaf5 50%, #91dce9 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 3%;
+    box-shadow: 0 20px 50px rgba(9, 148, 195, 0.15);
+}
+
+.gota-grande {
+    width: 160px;
+    height: 160px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 95px;
+    box-shadow: 0 15px 30px rgba(9, 148, 195, 0.15);
+}
+
+.mensaje-agua {
+    position: absolute;
+    bottom: 30px;
+    background-color: white;
+    padding: 14px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mensaje-agua strong {
+    color: #087ea4;
+}
+
+.mensaje-agua span {
+    color: #78909c;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ESTADÍSTICAS
+========================================= */
+
+.estadisticas {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 8%;
+    border-bottom: 1px solid #e5eef3;
+}
+
+.estadistica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-right: 1px solid #e1ebef;
+}
+
+.estadistica:last-child {
+    border-right: none;
+}
+
+.estadistica-icono {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #eaf8fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.estadistica strong {
+    display: block;
+    font-size: 24px;
+    color: #087ea4;
+}
+
+.estadistica p {
+    color: #78909c;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.seccion {
+    padding: 90px 8%;
+}
+
+.titulo-seccion {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.titulo-seccion > span {
+    color: #0794c3;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    color: #123b56;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 12px 0 15px;
+}
+
+.titulo-seccion h2 strong {
+    color: #0794c3;
+}
+
+.titulo-seccion p {
+    color: #78909c;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjetas {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #e5eef3;
+    border-radius: 15px;
+    padding: 28px 23px;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(31, 85, 105, 0.04);
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(31, 85, 105, 0.10);
+}
+
+.tarjeta-icono {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.azul {
+    background-color: #e5f5ff;
+}
+
+.celeste {
+    background-color: #e4f9fb;
+}
+
+.rojo {
+    background-color: #fff0ed;
+}
+
+.amarillo {
+    background-color: #fff8dc;
+}
+
+.tarjeta h3 {
+    color: #173f58;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    color: #78909c;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.tarjeta a {
+    color: #0794c3;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   SECCIÓN AZUL
+========================================= */
+
+.seccion-azul {
+    padding: 75px 9%;
+    background: linear-gradient(120deg, #057fa8, #079cc9);
+    color: white;
+}
+
+.contenido-azul {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.etiqueta-clara {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.contenido-azul h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.contenido-azul h2 span {
+    display: block;
+    color: #d9f8ff;
+}
+
+.contenido-azul p {
+    max-width: 650px;
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.gota-secundaria {
+    width: 170px;
+    height: 170px;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    margin-right: 5%;
+}
+
+
+/* =========================================
+   RETOS
+========================================= */
+
+.retos-inicio {
+    background-color: #f7fbfd;
+}
+
+.retos {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reto {
+    background-color: white;
+    border: 1px solid #e5eef3;
+    border-radius: 12px;
+    padding: 20px 25px;
+    display: grid;
+    grid-template-columns: 70px 1fr 130px;
+    align-items: center;
+    gap: 20px;
+}
+
+.reto-numero {
+    color: #0794c3;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.reto h3 {
+    color: #173f58;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.reto p {
+    color: #78909c;
+    font-size: 13px;
+}
+
+.reto-duracion {
+    background-color: #e8f7fb;
+    color: #087ea4;
+    padding: 7px 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.centrar {
+    text-align: center;
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   LLAMADO FINAL
+========================================= */
+
+.llamado {
+    background: linear-gradient(135deg, #083b56, #075d78);
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.llamado > div {
+    max-width: 700px;
+    margin: auto;
+}
+
+.llamado span {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: #9eeaf7;
+}
+
+.llamado h2 {
+    font-size: 40px;
+    margin: 12px 0;
+}
+
+.llamado p {
+    color: #d2e8ef;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-blanco {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: white;
+    color: #087ea4;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-blanco:hover {
+    transform: translateY(-2px);
+    background-color: #eaf9fd;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background-color: #082c40;
+    color: white;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 70px;
+}
+
+.footer-logo p {
+    max-width: 380px;
+    color: #a9c4ce;
+    font-size: 13px;
+    margin-top: 18px;
+    line-height: 1.7;
+}
+
+.footer-logo .logo h2 {
+    color: white;
+}
+
+.footer-logo .logo span:last-child {
+    color: #8eb5c3;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-columna h3 {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.footer-columna a {
+    color: #a9c4ce;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-columna a:hover {
+    color: #6dd9ee;
+}
+
+.footer-final {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-final p {
+    color: #89aab6;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 15px 3%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .hero-visual {
+        width: 320px;
+        height: 320px;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULAR
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+        order: 3;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-login {
+        margin-left: auto;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botones {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-visual {
+        margin-right: 0;
+    }
+
+    .estadisticas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .estadistica {
+        border-right: none;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-azul {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .contenido-azul h2 {
+        font-size: 35px;
+    }
+
+    .reto {
+        grid-template-columns: 50px 1fr;
+    }
+
+    .reto-duracion {
+        grid-column: 2;
+        width: fit-content;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULAR PEQUEÑO
+========================================= */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-visual {
+        width: 270px;
+        height: 270px;
+    }
+
+    .gota-grande {
+        width: 120px;
+        height: 120px;
+        font-size: 70px;
+    }
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+    }
+
+    .estadistica {
+        justify-content: flex-start;
+    }
+
+    .seccion {
+        padding: 65px 5%;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 29px;
+    }
+
+    .llamado h2 {
+        font-size: 32px;
+    }
+
+}
